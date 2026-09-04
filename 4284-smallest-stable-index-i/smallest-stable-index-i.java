@@ -14,8 +14,9 @@ class Solution {
         int max = nums[0];
 
         for (int i = 0; i < n; i++) {
-            max = Math.max(max, nums[i]);
-
+            // max = Math.max(max, nums[i]);
+            if(nums[i]>max)
+                max = nums[i];
             if (max - min[i] <= k) {
                 return i;
             }
